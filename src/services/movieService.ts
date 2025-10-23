@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Movie } from "../types/movie";
 
-interface MoviesHttpResponce {
+interface MoviesHttpResponse {
   results: Movie[];
 }
 
@@ -13,7 +13,7 @@ export const fetchMovies = async (
 
   const options = {
     method: "GET",
-    baseURL: `https://api.themoviedb.org/3/search/movie`,
+    URL: `https://api.themoviedb.org/3/search/movie`,
     params: {
       query,
       page,
@@ -24,10 +24,7 @@ export const fetchMovies = async (
     },
   };
 
-  const response = await axios.get<MoviesHttpResponce>(
-    options.baseURL,
-    options
-  );
+  const response = await axios.get<MoviesHttpResponse>(options.URL, options);
 
   return response.data.results;
 };
