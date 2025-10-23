@@ -5,7 +5,7 @@ import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import { fetchMovies } from "../../services/movieService";
 import toast from "react-hot-toast";
-import type { Movie } from "../../types/movies";
+import type { Movie } from "../../types/movie";
 import MovieModal from "../MovieModal/MovieModal";
 
 export default function App() {
